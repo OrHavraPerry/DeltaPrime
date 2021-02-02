@@ -651,17 +651,17 @@
   #define DELTA_DIAGONAL_ROD 218       // (mm)
 
   // Distance between bed and nozzle Z home position
-  #define DELTA_HEIGHT 422.08            // (mm) Get this value from G33 auto calibrate
+  #define DELTA_HEIGHT 332           // (mm) Get this value from G33 auto calibrate
 
-  #define DELTA_ENDSTOP_ADJ { -0.118, -0.194, 0 } // Get these values from G33 auto calibrate
+  #define DELTA_ENDSTOP_ADJ { +0.00, -3.71, -0.01 } // Get these values from G33 auto calibrate
 
   // Horizontal distance bridged by diagonal push rods when effector is centered.
-  #define DELTA_RADIUS 116.69             // (mm) Get this value from G33 auto calibrate
+  #define DELTA_RADIUS 94.73             // (mm) Get this value from G33 auto calibrate
 
   // Trim adjustments for individual towers
   // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
   // measured in degrees anticlockwise looking from above the printer
-  #define DELTA_TOWER_ANGLE_TRIM { 1.787, -1.252, -0.536 } // Get these values from G33 auto calibrate
+  #define DELTA_TOWER_ANGLE_TRIM { +1.60, -0.81, -0.79 } // Get these values from G33 auto calibrate
 
   // Delta radius and diagonal rod adjustments (mm)
   //#define DELTA_RADIUS_TRIM_TOWER { 0.0, 0.0, 0.0 }
@@ -804,7 +804,7 @@
 #define XYZ_FULL_STEPS_PER_ROTATION 200
 #define XYZ_MICROSTEPS 16
 #define XYZ_BELT_PITCH 2
-#define XYZ_PULLEY_TEETH 20
+#define XYZ_PULLEY_TEETH 16
 
 // delta speeds must be the same on xyz
 #define DEFAULT_XYZ_STEPS_PER_UNIT ((XYZ_FULL_STEPS_PER_ROTATION) * (XYZ_MICROSTEPS) / double(XYZ_BELT_PITCH) / double(XYZ_PULLEY_TEETH))
@@ -815,7 +815,7 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 500, 500, 500, 100 }
+#define DEFAULT_MAX_FEEDRATE          { 500, 500, 500, 300 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -1330,7 +1330,7 @@
  *   leveling in steps so you can manually adjust the Z height at each grid-point.
  *   With an LCD controller the process is guided step-by-step.
  */
-//#define AUTO_BED_LEVELING_3POINT
+#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
 //#define AUTO_BED_LEVELING_BILINEAR
 //#define AUTO_BED_LEVELING_UBL
