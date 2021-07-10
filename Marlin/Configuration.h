@@ -129,11 +129,11 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_RAMPS_14_EFB
+  #define MOTHERBOARD BOARD_MKS_GEN_13
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "Deltabot"
+#define CUSTOM_MACHINE_NAME "MakeIt Delta D1"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -425,7 +425,7 @@
 #define TEMP_SENSOR_5 0
 #define TEMP_SENSOR_6 0
 #define TEMP_SENSOR_7 0
-#define TEMP_SENSOR_BED 1
+#define TEMP_SENSOR_BED 0
 #define TEMP_SENSOR_PROBE 0
 #define TEMP_SENSOR_CHAMBER 0
 
@@ -651,9 +651,9 @@
   #define DELTA_DIAGONAL_ROD 218       // (mm)
 
   // Distance between bed and nozzle Z home position
-  #define DELTA_HEIGHT 333           // (mm) Get this value from G33 auto calibrate
+  #define DELTA_HEIGHT 285.95          // (mm) Get this value from G33 auto calibrate
 
-  #define DELTA_ENDSTOP_ADJ {-3.05,-1.17,+0.00} // Get these values from G33 auto calibrate
+  #define DELTA_ENDSTOP_ADJ {0,0,0} // Get these values from G33 auto calibrate
 
   // Horizontal distance bridged by diagonal push rods when effector is centered.
   #define DELTA_RADIUS 95.53           // (mm) Get this value from G33 auto calibrate
@@ -661,7 +661,7 @@
   // Trim adjustments for individual towers
   // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
   // measured in degrees anticlockwise looking from above the printer
-  #define DELTA_TOWER_ANGLE_TRIM {+0.92,-0.86,-0.06} // Get these values from G33 auto calibrate
+  #define DELTA_TOWER_ANGLE_TRIM {0,0,0} // Get these values from G33 auto calibrate
 
   // Delta radius and diagonal rod adjustments (mm)
   //#define DELTA_RADIUS_TRIM_TOWER { 0.0, 0.0, 0.0 }
@@ -1879,7 +1879,7 @@
 //
 //  Set this option if CLOCKWISE causes values to DECREASE
 //
-#define REVERSE_ENCODER_DIRECTION
+//#define REVERSE_ENCODER_DIRECTION
 
 //
 // This option reverses the encoder direction for navigating LCD menus.
