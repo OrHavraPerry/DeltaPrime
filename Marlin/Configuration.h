@@ -651,7 +651,7 @@
   #define DELTA_DIAGONAL_ROD 218       // (mm)
 
   // Distance between bed and nozzle Z home position
-  #define DELTA_HEIGHT 295          // (mm) Get this value from G33 auto calibrate
+  #define DELTA_HEIGHT 333          // (mm) Get this value from G33 auto calibrate
 
   #define DELTA_ENDSTOP_ADJ {0,0,0} // Get these values from G33 auto calibrate
 
@@ -1130,7 +1130,7 @@
 #define Z_CLEARANCE_MULTI_PROBE     5 // Z Clearance between multiple probes
 #define Z_AFTER_PROBING           5 // Z position after probing is done
 
-#define Z_PROBE_LOW_POINT          -2 // Farthest distance below the trigger-point to go before stopping
+#define Z_PROBE_LOW_POINT          -5 // Farthest distance below the trigger-point to go before stopping
 
 // For M851 give a range for adjusting the Z probe offset
 #define Z_PROBE_OFFSET_RANGE_MIN -20
@@ -1621,7 +1621,7 @@
  *    P1  Raise the nozzle always to Z-park height.
  *    P2  Raise the nozzle by Z-park amount, limited to Z_MAX_POS.
  */
-//#define NOZZLE_PARK_FEATURE
+#define NOZZLE_PARK_FEATURE
 
 #if ENABLED(NOZZLE_PARK_FEATURE)
   // Specify a park position as { X, Y, Z_raise }
